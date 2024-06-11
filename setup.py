@@ -516,7 +516,7 @@ def get_extensions():
             "nvcc": [
                 "-O3",
                 "-std=c++17",
-                f"--offload-arch={os.getenv('HIP_ARCHITECTURES', 'native')}",
+                f"--offload-arch={os.getenv('HIP_ARCHITECTURES', 'gfx803')}",
                 "-U__CUDA_NO_HALF_OPERATORS__",
                 "-U__CUDA_NO_HALF_CONVERSIONS__",
                 "-DCK_FMHA_FWD_FAST_EXP2=1",
